@@ -20,7 +20,7 @@ body {
 }
 
 .avatar {
-    width: 15rem;
+    width: 10rem;
     filter: drop-shadow(0px 0px 20px #ffffff);
     -webkit-filter: drop-shadow(0px 0px 20px #ffffff);
     -moz-filter: drop-shadow(0px 0px 20px #ffffff);
@@ -34,6 +34,8 @@ body {
 
     /* justify-content: center */
     margin-bottom: 20px;
+
+    /* margin-top: -100px */
 }
 
 .heading {
@@ -51,6 +53,7 @@ body {
     border-radius: 10px;
     background-color: rgba(243, 243, 243, 0.685);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.486);
+    max-height: 80vh;
 
     /* position: absolute */
 }
@@ -148,7 +151,7 @@ button:active {
     }
 
     .avatar {
-        width: 10rem;
+        width: 5rem;
     }
 }
 
