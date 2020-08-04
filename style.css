@@ -20,7 +20,7 @@ body {
 }
 
 .avatar {
-    width: 10rem;
+    width: 20rem;
     filter: drop-shadow(0px 0px 20px #ffffff);
     -webkit-filter: drop-shadow(0px 0px 20px #ffffff);
     -moz-filter: drop-shadow(0px 0px 20px #ffffff);
@@ -34,6 +34,9 @@ body {
 
     /* justify-content: center */
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     /* margin-top: -100px */
 }
@@ -151,7 +154,10 @@ button:active {
     }
 
     .avatar {
-        width: 5rem;
+        width: 10rem;
+    }
+
+    .heading-container {
+        flex-direction: column;
     }
 }
-
