@@ -1,4 +1,5 @@
-const quoteContainer = document.getElementById('quote-container');
+// const quoteContainer = document.getElementById('quote-container');
+const mainContainer = document.getElementById('container-main');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
@@ -8,13 +9,15 @@ const loader = document.getElementById('loader');
 // Show Loading
 function loading() {
     loader.hidden = false;
-    quoteContainer.hidden = true;
+    // quoteContainer.hidden = true;
+    mainContainer.hidden = true;
   }
 
 //   Hide Loading
   function complete () {
       if (!loader.hidden) {
-          quoteContainer.hidden = false;
+          mainContainer.hidden = false;
+        //   quoteContainer.hidden = false;
           loader.hidden = true;
       }
   }
