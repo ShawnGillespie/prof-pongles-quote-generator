@@ -57,7 +57,7 @@ body {
     border-radius: 10px;
     background-color: rgba(243, 243, 243, 0.685);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.486);
-    max-height: 80vh;
+    margin-bottom: 20px;
 
     /* position: absolute */
 }
@@ -155,7 +155,7 @@ button:active {
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 1000px) {
     .quote-container {
-        margin: auto 10px;
+        margin: auto 10px 20px;
     }
 
     .quote-text {
@@ -166,11 +166,20 @@ button:active {
         font-size: 2rem;
     }
 
-    .avatar {
-        width: 10rem;
-    }
-
     .heading-container {
         flex-direction: column;
     }
 }
+
+@media (min-width:768px) and (max-width:999px) {
+    .heading-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width:767px) {
+    .avatar {
+        width: 10rem;
+    }
+}
+
