@@ -37,6 +37,7 @@ body {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    position: relative;
 
     /* margin-top: -100px */
 }

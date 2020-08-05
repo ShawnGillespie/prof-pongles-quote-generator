@@ -6,15 +6,13 @@ const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
-// Show Loading
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     // quoteContainer.hidden = true;
     mainContainer.hidden = true;
   }
 
-//   Hide Loading
-  function complete () {
+function removeLoadingSpinner () {
       if (!loader.hidden) {
           mainContainer.hidden = false;
         //   quoteContainer.hidden = false;
@@ -24,7 +22,7 @@ function loading() {
 
 // Get Quote From API
 async function getQuote() {
-    loading();
+    showLoadingSpinner();
     const proxyUrl = 'https://boiling-lake-30864.herokuapp.com/';
     const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
     try {
@@ -45,17 +43,17 @@ async function getQuote() {
         }
         quoteText.innerText = data.quoteText;
         // Stop Loader, Show Quote
-        complete();
+        removeLoadingSpinner();
     } catch (error) {
-        // getQuote();
-        }
+        getQuote();
+    }
 }
 
 // Tweet quote
 function tweetQuote () {
     const quote = quoteText.innerText;
-    const author = authorText.innerText;
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} - ${author} https://shawngillespie.github.io/prof-pongles-quote-generator/`;
+    const author = authorText.innerText;const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} - ${author} https://shawngillespie.github.io/prof-pongles-quote-generator/`;
+    
     window.open(twitterUrl, '_blank');
 }
 
